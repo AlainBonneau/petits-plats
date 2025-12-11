@@ -1,0 +1,40 @@
+header {
+  width: 100%;
+  min-height: 100vh;
+  background: url(../../../../public/header-pic.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header .nav {
+  width: 100%;
+}
+
+header nav .logo {
+  margin: 51px 0 0 69px;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+}
+
+.title-input-container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-input-container h1 {
+  font-family: var(--main-family-font);
+  color: var(--main-color);
+  font-size: 2.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}

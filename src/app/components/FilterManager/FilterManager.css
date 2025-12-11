@@ -1,0 +1,16 @@
+.all-filters-container {
+  padding-top: 60px;
+  display: flex;
+  align-items: flex-start;
+  gap: 65px;
+}
+
+@media screen and (max-width: 600px) {
+  .all-filters-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+

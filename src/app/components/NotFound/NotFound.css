@@ -1,0 +1,40 @@
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url(../../../../public/header-pic.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.not-found-nav {
+  padding: 30px;
+}
+
+.not-found-nav .logo {
+  margin: 51px 0 0 69px;
+}
+
+.not-found-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.not-found-main h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 4.375rem;
+  font-weight: 400;
+  color: var(--main-color);
+}
+
+.not-found-main p {
+  color: #ffffff;
+  font-family: "Anton", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+}

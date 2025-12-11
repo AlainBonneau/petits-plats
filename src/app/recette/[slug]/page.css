@@ -1,0 +1,136 @@
+.header {
+  width: 100%;
+  height: 185px;
+  display: flex;
+  align-items: center;
+  background: url(../../../../public/header-pic.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.header .nav {
+  width: 100%;
+}
+
+.header nav .logo {
+  margin-left: 69px;
+}
+
+.main-recipe {
+  padding-bottom: 60px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  gap:20px;
+}
+
+.recipe-page-left-container {
+  width: 50%;
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.recipe-image {
+  border-radius: 21px;
+  object-fit: cover;
+}
+
+.recipe-page-right-container {
+  width: 50%;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-page-right-container h1 {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  padding-bottom: 32px;
+}
+
+.time-container {
+  padding-bottom: 32px;
+}
+
+h6 {
+  color: grey;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 9%;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.time-container p {
+  background-color: var(--main-color);
+  color: #000000;
+  width: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px 5px 15px;
+  border-radius: 14px;
+  font-size: 0.875rem;
+}
+
+.recipe-page-ingredients-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+  gap: 20px 30px; /* vertical / horizontal */
+  padding-bottom: 32px;
+}
+
+.recipe-page-ingredients-container dt {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.recipe-page-ingredients-container dd {
+  font-weight: 400;
+  font-size: 1rem;
+  color: grey;
+}
+
+.recipe-page-utensils-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+  gap: 20px 30px; /* vertical / horizontal */
+  padding-bottom: 32px;
+}
+
+.recipe-page-description-container p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .main-recipe {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .recipe-page-left-container,
+  .recipe-page-right-container {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .recipe-page-right-container {
+    text-align: center;
+  }
+
+  .time-container p {
+    width: 100%;
+  }
+
+  .recipe-page-ingredients-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+  }
+
+  .recipe-page-utensils-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+  }
+}

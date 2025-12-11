@@ -1,0 +1,159 @@
+.filters-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 220px;
+}
+
+.filter-box {
+  width: 220px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 11px;
+  padding: 17px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-box.open {
+  padding-bottom: 12px;
+}
+
+.filter-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  font-size: 0.938rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+
+.filter-content {
+  margin-top: 10px;
+}
+
+.search-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.search-wrapper input {
+  width: 100%;
+  padding: 8px 40px 8px 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* Loupe */
+.filter-search-icon {
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+}
+
+/* Croix */
+.clear-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.clear-icon:hover {
+  color: #333;
+}
+
+/* Liste */
+.option-list {
+  max-height: 160px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.option-list li {
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.option-list li:hover,
+.option-list li.selected {
+  background: var(--main-color);
+  font-weight: 600;
+}
+
+/* Favoris sélectionnés */
+.selected-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.selected-tag {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--main-color);
+  padding: 17px 10px;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  color: #000000;
+  font-weight: 400;
+}
+
+.remove-tag {
+  cursor: pointer;
+  font-size: 0.813rem;
+}
+
+@media screen and (max-width: 900px) {
+  .filters-container {
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .filter-box {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .filter-title-container h5 {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .filters-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .filter-box {
+    width: 100%;
+    max-width: none;
+  }
+
+  .filter-title-container h5 {
+    padding-top: 0;
+  }
+}

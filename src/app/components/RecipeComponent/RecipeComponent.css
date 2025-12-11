@@ -1,0 +1,99 @@
+.recipe-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.recipe-container {
+  width: 380px;
+  min-height: 730px;
+  border-radius: 21px;
+}
+
+.recipe-img-container {
+  position: relative;
+  overflow: hidden;
+  width: 380px;
+  height: 253px;
+  border-radius: 21px 21px 0px 0px;
+}
+
+.recipe-img-container p {
+  position: absolute;
+  top: 21px;
+  right: 21px;
+  background-color: var(--main-color);
+  color: #000000;
+  padding: 5px 15px 5px 15px;
+  border-radius: 14px;
+  font-size: 0.875rem;
+}
+
+/* rajouterle pins ici plus tard */
+
+.recipe-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipe-white-bg {
+  background-color: #ffffff;
+  border-radius: 0px 0px 21px 21px;
+}
+
+.recipe-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.recipe-infos-container h2 {
+  padding-top: 32px;
+  font-family: var(--main-family-font);
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+.recipe-description-container {
+  padding-top: 29px;
+}
+
+.recipe-description-container h6,
+.recipe-ingredients-container h6 {
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #7a7a7a;
+}
+
+.recipe-description-container p {
+  padding-top: 15px;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.recipe-ingredients-container {
+  padding-top: 32px;
+}
+
+.recipe-ingredients-container h6 {
+  padding-bottom: 12px;
+}
+
+.recipe-quantity {
+  padding-bottom: 61px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+
+.recipe-quantity dt {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.recipe-quantity dd {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #7a7a7a;
+}
