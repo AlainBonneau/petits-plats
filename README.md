@@ -26,3 +26,5 @@ Ce projet a pour but de mettre en pratique la **gestion d’état**, le **filtra
 ---
 
 Projet réalisé dans une démarche d’apprentissage et de progression en développement web !
+
+Lien vers le projet : https://petits-plat.vercel.app/
