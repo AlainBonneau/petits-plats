@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronDown,
@@ -12,6 +12,7 @@ import "./FilterComponent.css";
 export default function FilterComponent({ label, items, selected, onChange }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
+  const boxRef = useRef(null);
 
   const filtered = items.filter((item) =>
     item.toLowerCase().includes(search.toLowerCase())
@@ -34,9 +35,24 @@ export default function FilterComponent({ label, items, selected, onChange }) {
     onChange([]);
   };
 
+  useEffect(() => {
+    if (!open) return;
+    const onDocPointerDown = (e) => {
+      if (boxRef.current && !boxRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", onDocPointerDown);
+    document.addEventListener("touchstart", onDocPointerDown, { passive: true });
+    return () => {
+      document.removeEventListener("mousedown", onDocPointerDown);
+      document.removeEventListener("touchstart", onDocPointerDown);
+    };
+  }, [open]);
+
   return (
     <div className="filters-container">
-      <div className={`filter-box ${open ? "open" : ""}`}>
+      <div ref={boxRef} className={`filter-box ${open ? "open" : ""}`}>
         <button className="filter-toggle" onClick={() => setOpen(!open)}>
           {label}
           <FontAwesomeIcon
